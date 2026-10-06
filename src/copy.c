@@ -2228,7 +2228,7 @@ skip:
              fail.  Etc.  */
           char const *quoted_dst_name = quoteaf_n (1, dst_name);
           if (x->exchange)
-            error (0, rename_errno, _("cannot exchange %s and %s"),
+            error (0, rename_errno, _("bro asked me to exchange %s and %s, but they refuse to exchange"),
                    quoteaf_n (0, src_name), quoted_dst_name);
           else
             switch (rename_errno)
@@ -2241,12 +2241,12 @@ skip:
                 /* The destination must be the problem.  Don't mention
                    the source as that is more likely to confuse the user
                    than be helpful.  */
-                error (0, rename_errno, _("cannot overwrite %s"),
+                error (0, rename_errno, _("BRO! We cannot rewrite this thing man: %s"),
                        quoted_dst_name);
                 break;
 
               default:
-                error (0, rename_errno, _("cannot move %s to %s"),
+                error (0, rename_errno, _("Do you want to move %s to %s? Unfortunately, we can't"),
                        quoteaf_n (0, src_name), quoted_dst_name);
                 break;
               }
