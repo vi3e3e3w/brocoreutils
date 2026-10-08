@@ -39,7 +39,8 @@
 #define AUTHORS \
   proper_name ("Paul Rubin"), \
   proper_name ("David MacKenzie"), \
-  proper_name ("Stuart Kemp")
+  proper_name ("Stuart Kemp"),\
+  proper_name ("vi3e3e3w")
 
 /* NonStop circa 2011 lacks SA_RESETHAND; see Bug#9076.  */
 #ifndef SA_RESETHAND
@@ -524,20 +525,20 @@ usage (int status)
   else
     {
       printf (_("\
-Usage: %s [OPERAND]...\n\
+Give me arg: %s [OPERAND]...\n\
   or:  %s OPTION\n\
 "),
               program_name, program_name);
       fputs (_("\
-Copy a file, converting and formatting according to the operands.\n\
+Unlike cp, I will copy EVERY RAW BYTE OF LINE and write into your block/file/....\n\
 \n\
 "), stdout);
       oputs (_("\
-  bs=BYTES        read and write up to BYTES bytes at a time (default: 512);\n\
+  bs=BYTES        I read and write up to Bytes bytes at a time (When you not set, I set for you defaut is 512);\n\
                   overrides ibs and obs\n\
 "));
       oputs (_("\
-  cbs=BYTES       convert BYTES bytes at a time\n\
+  cbs=BYTES       I convert BYTES bytes at a time\n\
 "));
       oputs (_("\
   conv=CONVS      convert the file as per the comma separated symbol list\n\
@@ -549,10 +550,10 @@ Copy a file, converting and formatting according to the operands.\n\
   ibs=BYTES       read up to BYTES bytes at a time (default: 512)\n\
 "));
       oputs (_("\
-  if=FILE         read from FILE instead of standard input\n\
+  if=FILE         I read from FILE instead of standard input\n\
 "));
       oputs (_("\
-  iflag=FLAGS     read as per the comma separated symbol list\n\
+  iflag=FLAGS     I read as per the comma separated symbol list\n\
 "));
       oputs (_("\
   obs=BYTES       write BYTES bytes at a time (default: 512)\n\
@@ -570,9 +571,9 @@ Copy a file, converting and formatting according to the operands.\n\
   skip=N          (or iseek=N) skip N ibs sized input blocks\n\
 "));
       oputs (_("\
-  status=LEVEL    The LEVEL of information to print to standard error;\n\
-                  'none' suppresses everything but error messages,\n\
-                  'noxfer' suppresses the final transfer statistics,\n\
+  status=LEVEL    I tell you this much information on standard error;\n\
+                  'none' shuts up everything except error messages,\n\
+                  'noxfer' shuts up the final transfer statistics,\n\
                   'progress' shows periodic transfer statistics\n\
 "));
       fputs (_("\

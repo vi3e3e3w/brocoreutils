@@ -48,34 +48,35 @@ usage (int status)
   else
     {
       printf (_("\
-Usage: %s NAME [SUFFIX]\n\
+Give me your arg: %s NAME [SUFFIX]\n\
   or:  %s OPTION... NAME...\n\
 "),
               program_name, program_name);
       fputs (_("\
-Print NAME with any leading directory components removed.\n\
-If specified, also remove a trailing SUFFIX.\n\
+I will remove the dir name and print the basename.\n\
+I can also remove a suffix from the basename.\n\
+    for more, RTFM (basename(1))\n\
 "), stdout);
 
       emit_mandatory_arg_note ();
 
       oputs (_("\
   -a, --multiple\n\
-         support multiple arguments and treat each as a NAME\n\
+         I can do multiple arg and treat as a NAME\n\
 "));
       oputs (_("\
   -s, --suffix=SUFFIX\n\
-         remove a trailing SUFFIX; implies -a\n\
+         Good bye SUFFIX; and enable -a secertly\n\
 "));
       oputs (_("\
   -z, --zero\n\
-         end each output line with NUL, not newline\n\
+         I put NUL character not newline\n\
 "));
       oputs (HELP_OPTION_DESCRIPTION);
       oputs (VERSION_OPTION_DESCRIPTION);
       printf (_("\
 \n\
-Examples:\n\
+E.g:\n\
   %s /usr/bin/sort          -> \"sort\"\n\
   %s include/stdio.h .h     -> \"stdio\"\n\
   %s -s .h include/stdio.h  -> \"stdio\"\n\

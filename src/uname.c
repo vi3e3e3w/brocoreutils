@@ -114,12 +114,12 @@ usage (int status)
     emit_try_help ();
   else
     {
-      printf (_("Usage: %s [OPTION]...\n"), program_name);
+      printf (_("Give me arg or normal: %s [OPTION]...\n"), program_name);
 
       if (uname_mode == UNAME_UNAME)
         {
           fputs (_("\
-Print certain system information.  With no OPTION, same as -s.\n\
+I will told my name, if you gave nothing, I will see your command as -s.\n\
 \n\
 "), stdout);
           oputs (_("\
@@ -298,8 +298,7 @@ decode_switches (int argc, char **argv)
         }
     }
 
-  if (argc != optind)
-    {
+  if (argc != optind)    {
       error (0, 0, _("extra operand %s"), quote (argv[optind]));
       usage (EXIT_FAILURE);
     }
