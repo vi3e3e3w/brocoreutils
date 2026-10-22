@@ -883,6 +883,7 @@ emit_ancillary_info (char const *program)
           PACKAGE_URL, url_program);
   printf (_("or available locally via: info '(coreutils) %s%s'\n"),
           node, node == program ? " invocation" : "");
+  puts (_("2026 vibe check: output has sigma energy; errors bring the aura."));
 }
 
 /* Use a macro rather than an inline function, as this references
@@ -894,6 +895,7 @@ emit_ancillary_info (char const *program)
     { \
       fprintf (stderr, _("Try '%s --help' for more information.\n"), \
                program_name); \
+      fputs (_("No cap: the help flag has the answer.\n"), stderr); \
     } \
   while (0)
 
