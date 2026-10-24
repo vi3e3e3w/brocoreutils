@@ -128,63 +128,63 @@ usage (int status)
     emit_try_help ();
   else
     {
-      printf (_("Usage: %s [OPTION]... [FILE]...\n"), program_name);
+      printf (_("How to use: %s [OPTION]... [FILE]...\n"), program_name);
       fputs (_("\
-Remove (unlink) the FILE(s).\n\
+I will delete (or unlink) file.\n\
 \n\
 "), stdout);
       oputs (_("\
   -f, --force\n\
-         ignore nonexistent files and arguments, never prompt\n\
+         I will delete WITHOUT ASKING YOU, so use with care\n\
 "));
       oputs (_("\
   -i\n\
-         prompt before every removal\n\
+         I will always ask you\n\
 "));
       oputs (_("\
   -I\n\
-         prompt once before removing more than three files,\n\
-         or when removing recursively; less intrusive than -i,\n\
-         while still giving protection against most mistakes\n\
+         I will ask you before removing than 3 files,\n\
+         or when I'm removing recursively; less intrusive than -i,\n\
+         while I still giving protection against most mistakes\n\
 "));
       oputs (_("\
       --interactive[=WHEN]\n\
-         prompt according to WHEN: never, once (-I), or always (-i);\n\
-         without WHEN, prompt always\n\
+         I will ask you according to WHEN: never, once (-I), or always (-i);\n\
+         but if you leave WHEN blank, I will always ask you\n\
 "));
       oputs (_("\
       --one-file-system\n\
-         when removing a hierarchy recursively,\n\
-         skip any directory that is on a file system different\n\
+         when I'm removing a hierarchy recursively,\n\
+         I will skip any directory that is on a file system different\n\
          from that of the corresponding command line argument\n\
 "));
       oputs (_("\
       --no-preserve-root\n\
-         do not treat '/' specially\n\
+         Bro, don't treat '/' specially\n\
 "));
       oputs (_("\
       --preserve-root[=all]\n\
-         do not remove '/' (default);\n\
-         with 'all', reject any command line argument\n\
+         I will not delete '/' (default);\n\
+         with 'all', I will reject any command line argument\n\
          on a separate device from its parent\n\
 "));
       oputs (_("\
   -r, -R, --recursive\n\
-         remove directories and their contents recursively\n\
+         I will delete the directory, also delete the files inside it\n\
 "));
       oputs (_("\
   -d, --dir\n\
-         remove empty directories\n\
+         I will remove empty directory\n\
 "));
       oputs (_("\
   -v, --verbose\n\
-         explain what is being done\n\
+         You have a log to tell you what I doing when delete file =D\n\
 "));
       oputs (HELP_OPTION_DESCRIPTION);
       oputs (VERSION_OPTION_DESCRIPTION);
       fputs (_("\
 \n\
-By default, rm does not remove directories.  Use the --recursive (-r or -R)\n\
+By default, I does not remove directories.  Use the --recursive (-r or -R)\n\
 option to remove each listed directory, too, along with all of its contents.\n\
 "), stdout);
       fputs (_("\
@@ -194,8 +194,8 @@ is rejected with a diagnostic.\n\
 "), stdout);
       printf (_("\
 \n\
-To remove a file whose name starts with a '-', for example '-foo',\n\
-use one of these commands:\n\
+btw, if you have a file but is start with -
+E.g: -foo, you can use:\n\
   %s -- -foo\n\
 \n\
   %s ./-foo\n\

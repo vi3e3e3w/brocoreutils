@@ -34,13 +34,13 @@ get_root_dev_ino (struct dev_ino *root_d_i) _GL_ATTRIBUTE_NONNULL ();
   do									\
     {									\
       if (streq (Dirname, "/"))						\
-        error (0, 0, _("it is dangerous to operate recursively on %s"),	\
+        error (0, 0, _("Bro are actually do with %s?, it really dangerous!"),	\
                quoteaf (Dirname));					\
       else								\
         error (0, 0,							\
-               _("it is dangerous to operate recursively on %s (same as %s)"), \
+               _("Bro are actually do with %s?, it is really dangourus! (same as %s)"), \
                quoteaf_n (0, Dirname), quoteaf_n (1, "/"));		\
-      error (0, 0, _("use --no-preserve-root to override this failsafe")); \
+      error (0, 0, _("If you want, use --no-preserve-root to overide this failsafe")); \
     }									\
   while (0)
 
