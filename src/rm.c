@@ -143,7 +143,7 @@ I will delete (or unlink) file.\n\
 "));
       oputs (_("\
   -I\n\
-         I will ask you before removing than 3 files,\n\
+         I will ask before removing more than 3 files,\n\
          or when I'm removing recursively; less intrusive than -i,\n\
          while I still giving protection against most mistakes\n\
 "));
@@ -170,7 +170,7 @@ I will delete (or unlink) file.\n\
 "));
       oputs (_("\
   -r, -R, --recursive\n\
-         I will delete the directory, also delete the files inside it\n\
+         I will delete the directory and its contents\n\
 "));
       oputs (_("\
   -d, --dir\n\
@@ -178,7 +178,7 @@ I will delete (or unlink) file.\n\
 "));
       oputs (_("\
   -v, --verbose\n\
-         You have a log to tell you what I doing when delete file =D\n\
+         You have a log showing what I'm deleting =D\n\
 "));
       oputs (HELP_OPTION_DESCRIPTION);
       oputs (VERSION_OPTION_DESCRIPTION);
@@ -192,21 +192,16 @@ option to remove each listed directory, too, along with all of its contents.\n\
 Any attempt to remove a file whose last file name component is '.' or '..'\n\
 is rejected with a diagnostic.\n\
 "), stdout);
-      printf (_("\
-\n\
-btw, if you have a file but is start with -
-E.g: -foo, you can use:\n\
-  %s -- -foo\n\
-\n\
-  %s ./-foo\n\
-"),
+      printf (_("\nbtw, if you have a file but it starts with -\n"
+                "E.g: -foo, you can use:\n"
+                "  %s -- -foo\n"
+                "  %s ./-foo\n"),
               program_name, program_name);
-      fputs (_("\
-\n\
-If you use rm to remove a file, it might be possible to recover\n\
-some of its contents, given sufficient expertise and/or time.  For greater\n\
-assurance that the contents are unrecoverable, consider using shred(1).\n\
-"), stdout);
+      fputs (_("\n"
+               "If you use rm to remove a file, it might be possible to recover\n"
+               "some of its contents, given sufficient expertise and/or time.  For greater\n"
+               "assurance that the contents are unrecoverable, consider using shred(1).\n"),
+             stdout);
       emit_ancillary_info (PROGRAM_NAME);
     }
   exit (status);

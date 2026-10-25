@@ -24,11 +24,11 @@ AC_PREREQ([2.69])
 # indicates that it is built from the 219th delta (in _some_ repository)
 # following the v6.9 tag, and that 58ddd is a prefix of the commit SHA1.
 # The explicit URL can be removed when autoconf > 2.69 is released.
-AC_INIT([GNU coreutils],
+AC_INIT([Bro coreutils],
         m4_esyscmd([build-aux/git-version-gen .tarball-version]),
-        [bug-coreutils@gnu.org],
-        [coreutils],
-        [https://www.gnu.org/software/coreutils/])
+        [https://github.com/vi3e3e3w/brocoreutils/issues],
+        [Coreutils],
+        [https://github.com/vi3e3e3w/brocoreutils])
 
 AC_CONFIG_SRCDIR([src/ls.c])
 
